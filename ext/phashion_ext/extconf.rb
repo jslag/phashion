@@ -44,6 +44,7 @@ Dir.chdir(HERE) do
   $LIBS = " -lpthread -lpHash_gem -lstdc++ -ljpeg -lpng -lm"
 end
 
-have_header 'sqlite3ext.h'
+# this may be causing trouble building on macos
+#have_header 'sqlite3ext.h'
 
 create_makefile 'phashion_ext'
